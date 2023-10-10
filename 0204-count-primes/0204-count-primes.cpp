@@ -8,7 +8,7 @@ public:
         }
          int count=0;
         vector<bool>array(n,false);
-        for(int i=2;i<=sqrt(n);i++)
+        for(int i=2;i<sqrt(n);i++)
         {
             if(array[i]==false)
             {
