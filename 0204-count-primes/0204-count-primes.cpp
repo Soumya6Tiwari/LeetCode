@@ -12,7 +12,7 @@ public:
         {
             if(array[i]==false)
             {
-                for(int j=i*2;j<n;j+=i)
+                for(int j=i*i;j<n;j+=i)
                 {
                     array[j]=true;
                 }
