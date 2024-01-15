@@ -11,8 +11,7 @@ class Solution {
                 {
                     ind1=i;
                     ind2=j;
-                    break;
-                    
+                    break;  
                 }
             }
         }
