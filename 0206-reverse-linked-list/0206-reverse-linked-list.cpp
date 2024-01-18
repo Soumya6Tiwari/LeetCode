@@ -10,23 +10,49 @@
  */
 class Solution {
 public:
+    ListNode* Solve_using_recursion(ListNode*prev,ListNode*curr)
+    {
+        if(curr==NULL)
+        {
+            return prev;
+        }
+        ListNode*newnode=new ListNode();
+        newnode=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=newnode;
+        ListNode*ans= Solve_using_recursion(prev,curr);
+        return  ans;
+       
+    }
     ListNode* reverseList(ListNode* head)
     {
-        int i,j,k;
-        ListNode*prev=new ListNode();
-        ListNode*curr=new ListNode();
-        ListNode*nextnode=new ListNode();
+        //ITERATIVE METHOD
+        
+        // int i,j,k;
+        // ListNode*prev=new ListNode();
+        // ListNode*curr=new ListNode();
+        // ListNode*nextnode=new ListNode();
+        // prev=NULL;
+        // curr=head;
+        // while(curr!=NULL)
+        // {
+        //     nextnode=curr->next;
+        //     curr->next=prev;
+        //     prev=curr;
+        //     curr=nextnode;
+        // }
+        // head=prev;
+        // return head;
+        
+        //RECURSION METHOD
+         ListNode*prev=new ListNode();
+         ListNode*curr=new ListNode();
+        
         prev=NULL;
         curr=head;
-        while(curr!=NULL)
-        {
-            nextnode=curr->next;
-            curr->next=prev;
-            prev=curr;
-            curr=nextnode;
-        }
-        head=prev;
-        return head;
-        
+    
+        ListNode*ans=Solve_using_recursion(prev,curr);
+        return ans;
     }
 };
