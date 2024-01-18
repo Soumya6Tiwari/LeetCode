@@ -2,6 +2,9 @@ class Solution {
 public:
     int climbStairs(int n) 
     {
+        
+        //FIRST APPROACH
+        
         int i,j,k,ans=0;
         vector<int>result;
         result.push_back(1);
@@ -24,5 +27,18 @@ public:
         }
         return result[n];
         
+        
+        
+        //SECOND APPROACH ie FIBONACCI SERIES
+        // int i,j,tot;
+        // if(n==0)
+        // {
+        //     return 1;
+        // }
+        // if(n==1)
+        // {
+        //     return 1;
+        // }
+        // return (climbStairs(n-1)+climbStairs(n-2));
     }
 };
