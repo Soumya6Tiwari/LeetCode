@@ -34,7 +34,7 @@ public:
         }
          
         
-        if(ans>= 2147483647||ans<=-2147483648)
+        if(ans>=INT_MAX||ans<=INT_MIN)
         {
             return 0;
         }
