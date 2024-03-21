@@ -2,18 +2,24 @@ class Solution {
 public:
     void sortColors(vector<int>& nums)
     {
-        int i,j;
-        
-        for(i=0;i<nums.size()-1;i++)
+       // DUTCH NATIONAL FLAG ALGORITHM (STRIVER'S SHEET)
+        int low=0,mid=0,high=nums.size()-1,i,j,k;
+        while(mid<=high)
         {
-            for(j=i+1;j<nums.size();j++)
+            if(nums[mid]==0)
             {
-                if(nums[i]>nums[j])
-                {
-                    int temp=nums[i];
-                    nums[i]=nums[j];
-                    nums[j]=temp;
-                }
+                swap(nums[mid],nums[low]);
+                 mid++;
+                 low++;
+            }
+            else if(nums[mid]==1)
+            {
+                  mid++;   
+            }
+            else
+            {
+                 swap(nums[mid],nums[high]);
+                 high--;
             }
         }
       
