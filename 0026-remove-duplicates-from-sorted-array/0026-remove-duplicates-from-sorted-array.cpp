@@ -3,7 +3,6 @@ public:
     int removeDuplicates(vector<int>& nums)
     {
         int i,j,k;
-        vector<int>result;
         set<int>s;
         for(i=0;i<nums.size();i++)
         {
