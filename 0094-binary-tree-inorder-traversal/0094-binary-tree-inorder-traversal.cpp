@@ -21,19 +21,19 @@ public:
         
         // inorder is left root right
         // left traversal
-        if(root->left)
-        {
+        // if(root->left)
+        // {
         inordertraversal(root->left,v);
-        }
+        // }
         
         // process root
         v.push_back(root->val);
         
         // right traversal
-        if(root->right)
-        {
+        // if(root->right)
+        // {
         inordertraversal(root->right,v);
-        }
+        // }
     }
     vector<int> inorderTraversal(TreeNode* root) 
     {
