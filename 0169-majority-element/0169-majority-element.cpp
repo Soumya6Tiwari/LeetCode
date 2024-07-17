@@ -2,32 +2,19 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums)
     {
-        int i,j,k;
-        vector<int>result;
-        int ans;
-        set<int>s;
-        int max=0,count=0;
+        map<int,int>m;
+        int i,j,k,maxi=INT_MIN,ans;
         for(i=0;i<nums.size();i++)
         {
-            s.insert(nums[i]);
+            m[nums[i]]++;
         }
-        result.assign(s.begin(),s.end());
-        sort(result.begin(),result.end());
-        for(i=0;i<result.size();i++)
+        for(auto i:m)
         {
-            for(j=0;j<nums.size();j++)
+            if(i.second>=maxi)
             {
-                if(result[i]==nums[j])
-                {
-                    count++;
-                }
+                maxi=i.second;
+                ans=i.first;
             }
-            if(count>=max)
-            {
-                max=count;
-                ans=result[i];
-            }
-            count=0;
         }
         return ans;
         
