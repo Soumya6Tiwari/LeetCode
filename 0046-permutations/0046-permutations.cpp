@@ -5,6 +5,7 @@ public:
         if(v.size()==nums.size())
         {
             ans.push_back(v);
+            return;
         }
         
         for(int i=0;i<nums.size();i++)
