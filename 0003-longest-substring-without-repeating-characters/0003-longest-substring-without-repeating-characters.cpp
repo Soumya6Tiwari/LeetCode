@@ -2,11 +2,11 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) 
     {
-//         // Edge case: If the string is empty, return 0
+         // Edge case: If the string is empty, return 0
         if(s.empty())
             return 0;
 
-//         // Edge case: If the string has only one character, return 1
+        // Edge case: If the string has only one character, return 1
         if(s.size() == 1)
             return 1;
 
